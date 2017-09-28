@@ -1,11 +1,11 @@
 <ul>
   <li>
-    Name: <%= @student.name %>
+    Name: <%= student.try(:name) %>
   </li>
   <li>
-    Birthday: <%= @student.birthday.strftime("%m/%d/%Y")  %>
+    Birthday: <%= student.try(:birthday).try(:strftime,("%m/%d/%Y"))  %>
   </li>
   <li>
-    Hometown: <%= @student.hometown.capitalize %>
+    Hometown: <%= student.try(:hometown).try(:capitalize) %>
   </li>
 </ul>
